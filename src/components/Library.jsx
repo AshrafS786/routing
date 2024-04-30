@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 const Library = () => {
   return (
     <div>
-      <h1 className="text-2xl">Library</h1>
+      <h1 className="font-extrabold text-2xl">Library</h1>
       <ul className="m-3 list-none">
         <li className="list-item">
           <Link to="/show/1">Book 1</Link>
