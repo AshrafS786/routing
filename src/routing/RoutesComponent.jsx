@@ -10,6 +10,7 @@ const RoutesComponent = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<Entry />} />
+        <Route path="/page" element={<Entry />} />
         <Route path="/show" element={<Library />}>
           <Route path="/show/:id" element={<Details />} />
         </Route>

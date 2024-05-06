@@ -12,6 +12,9 @@ const Nav = () => {
       <NavLink className={(e) => (e.isActive ? "bg-red-400 px-2 py-1 rounded-sm" : "")} to="/show">
         Library
       </NavLink>
+      <NavLink className={(e) => (e.isActive ? "bg-red-400 px-2 py-1 rounded-sm" : "")} to="/page">
+        Pagination
+      </NavLink>
     </nav>
   );
 };

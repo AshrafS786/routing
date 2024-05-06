@@ -1,9 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "../utils/axios";
 import { useNavigate } from "react-router-dom";
 
 const Entry = () => {
   const [posts, setposts] = useState([]);
+
+const [valid, setvalid] = useState(false);
+
+useEffect(() => {
+  console.log("Entry.jsx Mounted");
+}, [])
+console.log("Entry.jsx Loaded");
+
+console.log(valid);
 
   const navigate = useNavigate();
 
@@ -32,9 +41,16 @@ const Entry = () => {
     ));
   }
 
+  useEffect(() => {
+    getPosts();
+  }, []);
+
   return (
     <div>
       <h1 className="font-extrabold text-2xl">Book Entry</h1>
+
+
+
       <button
         className="mt-5 px-2 py-1 bg-blue-400 rounded-sm"
         onClick={getPosts}
